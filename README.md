@@ -1,0 +1,1 @@
+# Magento quick product view
