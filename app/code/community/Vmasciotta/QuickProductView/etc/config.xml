@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Vmasciotta_QuickProductView>
+            <version>1.0.0</version>
+        </Vmasciotta_QuickProductView>
+    </modules>
+    <global>
+        <blocks>
+            <vmasciotta_quickproductview>
+                <class>Vmasciotta_QuickProductView_Block</class>
+            </vmasciotta_quickproductview>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <quickproductview>
+                <use>standard</use>
+                <args>
+                    <module>Vmasciotta_QuickProductView</module>
+                    <frontName>quickproductview</frontName>
+                </args>
+            </quickproductview>
+        </routers>
+        <layout>
+            <updates>
+                <vmasciotta_quickproductview>
+                    <file>vmasciotta/quickproductview.xml</file>
+                </vmasciotta_quickproductview>
+            </updates>
+        </layout>
+    </frontend>
+</config>

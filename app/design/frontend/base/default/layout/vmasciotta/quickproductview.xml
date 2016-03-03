@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<layout>
+    <quickproductview_index_view>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/empty.phtml</template>
+            </action>
+        </reference>
+
+        <update handle="catalog_product_view"/>
+
+        <remove name="head"/>
+        <remove name="header"/>
+        <remove name="pre-footer"/>
+        <remove name="footer"/>
+
+
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/empty.phtml</template>
+            </action>
+        </reference>
+
+        <reference name="content">
+            <remove name="product.info.upsell"/>
+            <remove name="product.info.additional"/>
+            <remove name="product.description"/>
+            <remove name="product.attributes"/>
+            <remove name="product.info.extrahint"/>
+        </reference>
+    </quickproductview_index_view>
+
+    <catalog_category_default>
+        <reference name="head">
+            <action method="addJs"><script>varien/product.js</script></action>
+            <action method="addJs"><script>varien/configurable.js</script></action>
+
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/product-media.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/swatches-product.js</name></action>
+            <action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
+        </reference>
+    </catalog_category_default>
+    <catalog_category_layered>
+        <reference name="head">
+            <action method="addJs"><script>varien/product.js</script></action>
+            <action method="addJs"><script>varien/configurable.js</script></action>
+
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/product-media.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/configurableswatches/swatches-product.js</name></action>
+            <action method="addItem"><type>js</type><name>calendar/calendar.js</name><!--<params/><if/><condition>can_load_calendar_js</condition>--></action>
+        </reference>
+    </catalog_category_layered>
+</layout>
